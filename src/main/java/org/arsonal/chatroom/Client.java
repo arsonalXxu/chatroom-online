@@ -44,7 +44,7 @@ public class Client {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String line = null;
-            if ((line = bufferedReader.readLine()) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
             }
 

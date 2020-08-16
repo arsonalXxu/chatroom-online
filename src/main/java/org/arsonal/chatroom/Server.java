@@ -71,12 +71,12 @@ public class Server {
     public void clientOffline(ClientConnection clientConnection) {
         clients.remove(clientConnection.getClientId());
         clients.values().forEach(client ->
-                dispatchMessage(client, "系统", "所以人", clientConnection.getClientName() + "下线了！" + getAllClientInfo()));
+                dispatchMessage(client, "系统", "所有人", clientConnection.getClientName() + "下线了！" + getAllClientInfo()));
     }
 
     public void clientOnline(ClientConnection clientConnection) {
         clients.values().forEach(client ->
-                dispatchMessage(client, "系统", "所以人", clientConnection.getClientName() + "上线了！" + getAllClientInfo()));
+                dispatchMessage(client, "系统", "所有人", clientConnection.getClientName() + "上线了！" + getAllClientInfo()));
     }
 
     public String getAllClientInfo() {
